@@ -1,12 +1,15 @@
 :root {
-  --bg: #0b1226;
-  --text: #e3e7f4;
-  --muted: #a9b3c9;
-  --primary: #2dd9ff;
-  --primary-2: #8b5cf6;
-  --accent: #00ffc6;
-  --border: rgba(255,255,255,0.12);
-  --card: rgba(255,255,255,0.06);
+  --bg: #0b0f14;
+  --text: #e8e6e3;
+  --muted: #b2afa8;
+  --primary: #d4b06a;
+  --primary-2: #b58f48;
+  --accent: #8b7d6b;
+  --border: rgba(255,255,255,0.08);
+  --card: rgba(255,255,255,0.04);
+  --grid-size: 64px;
+  --grid-line: rgba(255,255,255,0.06);
+  --grid-dot: rgba(212,176,106,0.28);
   font-family: Inter, "Space Grotesk", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -14,9 +17,10 @@
   color: var(--text);
   background-color: var(--bg);
   background-image:
-    radial-gradient(1000px 400px at 50% -20%, rgba(45,217,255,0.18), transparent),
-    radial-gradient(600px 300px at 10% 10%, rgba(139,92,246,0.18), transparent),
-    radial-gradient(600px 300px at 90% 20%, rgba(0,255,198,0.12), transparent);
+    linear-gradient(180deg, #0b0f14 0%, #131a22 100%),
+    radial-gradient(1000px 480px at 20% 0%, rgba(212,176,106,0.14), transparent 60%),
+    radial-gradient(900px 420px at 80% 70%, rgba(139,125,107,0.12), transparent 60%);
+  background-attachment: fixed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -25,20 +29,49 @@
 
 a {
   font-weight: 600;
-  color: var(--primary);
+  color: var(--text);
   text-decoration: none;
   transition: color .2s ease, text-shadow .2s ease;
 }
-a:hover {
-  color: var(--primary-2);
-  text-shadow: 0 0 8px rgba(45,217,255,0.35);
-}
+a:hover { color: var(--primary); }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   scroll-behavior: smooth;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: -10% -6%;
+  pointer-events: none;
+  background:
+    radial-gradient(1200px 600px at 20% 6%, rgba(212,176,106,0.12), transparent 60%),
+    radial-gradient(1000px 520px at 84% 86%, rgba(139,125,107,0.10), transparent 60%);
+  filter: blur(42px);
+  mix-blend-mode: soft-light;
+  opacity: 0.50;
+  transform: translate3d(0,0,0) scale(1);
+  animation: aurora 22s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 420px at 18% 10%, rgba(212,176,106,0.12), transparent),
+    radial-gradient(1100px 520px at 82% 78%, rgba(139,125,107,0.10), transparent);
+  filter: blur(24px);
+  mix-blend-mode: soft-light;
+  opacity: 0.45;
+}
+@keyframes aurora {
+  0%   { transform: translate3d(-2%, 0, 0) scale(1); }
+  50%  { transform: translate3d(2%, -1%, 0) scale(1.02); }
+  100% { transform: translate3d(-1%, 1%, 0) scale(1); }
 }
 
 h1 {
@@ -69,18 +102,14 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #f6f8ff;
-    --text: #213547;
-    --muted: #4b5563;
-    --border: rgba(0,0,0,0.12);
+    --bg: #f5f6f8;
+    --text: #222222;
+    --muted: #5f5d57;
+    --border: rgba(0,0,0,0.08);
     --card: rgba(0,0,0,0.04);
     background-color: var(--bg);
     color: var(--text);
   }
-  a:hover {
-    color: var(--primary-2);
-  }
-  button {
-    background-color: var(--card);
-  }
+  a:hover { color: var(--primary); }
+  button { background-color: var(--card); }
 }
