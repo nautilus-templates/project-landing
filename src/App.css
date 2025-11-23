@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  width: 100%;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0 0 24px;
+}
+
+.section-title {
+  font-size: 36px;
+  margin: 0 0 12px;
+}
+
+.section-desc {
+  font-size: 18px;
+  margin: 0 0 24px;
+}
+
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bullets li {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.cta {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary {
+  background: #646cff;
+  color: #fff;
+}
+
+.secondary {
+  background: #f4f4f4;
+  color: #213547;
+}
+
+.tertiary {
+  background: transparent;
+  border: 1px solid #646cff;
+  color: #646cff;
+}
+
+.hero {
+  background: radial-gradient(1000px 300px at 50% -50%, rgba(100,108,255,0.35), transparent),
+              linear-gradient(180deg, rgba(100,108,255,0.1), transparent);
+  animation-delay: 0s;
+}
+
+.problem {
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), transparent);
+  animation-delay: 0.1s;
+}
+
+.journey {
+  background: linear-gradient(180deg, rgba(100,108,255,0.08), transparent);
+  animation-delay: 0.2s;
+}
+
+.solution {
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), transparent);
+  animation-delay: 0.3s;
+}
+
+.future {
+  background: linear-gradient(180deg, rgba(100,108,255,0.06), transparent);
+  animation-delay: 0.4s;
+}
+
+.cta.section {
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), transparent);
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 32px;
+  }
+  .section-title {
+    font-size: 26px;
+  }
+  .section {
+    padding: 48px 16px;
+  }
+}
