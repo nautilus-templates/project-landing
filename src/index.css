@@ -1,10 +1,22 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg: #0b1226;
+  --text: #e3e7f4;
+  --muted: #a9b3c9;
+  --primary: #2dd9ff;
+  --primary-2: #8b5cf6;
+  --accent: #00ffc6;
+  --border: rgba(255,255,255,0.12);
+  --card: rgba(255,255,255,0.06);
+  font-family: Inter, "Space Grotesk", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: dark light;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(1000px 400px at 50% -20%, rgba(45,217,255,0.18), transparent),
+    radial-gradient(600px 300px at 10% 10%, rgba(139,92,246,0.18), transparent),
+    radial-gradient(600px 300px at 90% 20%, rgba(0,255,198,0.12), transparent);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -12,12 +24,14 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color .2s ease, text-shadow .2s ease;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--primary-2);
+  text-shadow: 0 0 8px rgba(45,217,255,0.35);
 }
 
 body {
@@ -33,18 +47,20 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 12px;
+  border: 1px solid var(--border);
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--card);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, transform .2s ease, box-shadow .2s ease;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px -10px rgba(45,217,255,0.35);
 }
 button:focus,
 button:focus-visible {
@@ -53,13 +69,18 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --bg: #f6f8ff;
+    --text: #213547;
+    --muted: #4b5563;
+    --border: rgba(0,0,0,0.12);
+    --card: rgba(0,0,0,0.04);
+    background-color: var(--bg);
+    color: var(--text);
   }
   a:hover {
-    color: #747bff;
+    color: var(--primary-2);
   }
   button {
-    background-color: #f9f9f9;
+    background-color: var(--card);
   }
 }

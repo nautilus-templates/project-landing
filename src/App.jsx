@@ -4,6 +4,21 @@ import './App.css'
 function App() {
   return (
     <div className="page">
+      <header className="header">
+        <div className="header-inner">
+          <div className="brand">
+            <span className="brand-dot" />
+            <span>Nautilus‑JS</span>
+          </div>
+          <nav className="nav">
+            <a href="#problem">Problem</a>
+            <a href="#journey">Journey</a>
+            <a href="#solution">Solution</a>
+            <a href="#future">Vision</a>
+            <a href="#cta">Sponsor</a>
+          </nav>
+        </div>
+      </header>
       <section className="section hero">
         <div className="container">
           <h1 className="title">Nautilus‑JS: Unlock Sui TEE Apps for Everyone</h1>
@@ -73,6 +88,7 @@ function App() {
           </div>
         </div>
       </section>
+      <footer className="footer">© Nautilus‑JS · Verifiable TEE Apps on Sui</footer>
     </div>
   )
 }
