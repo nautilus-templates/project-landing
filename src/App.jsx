@@ -84,7 +84,7 @@ function App() {
           </div>
         </section>
 
-        <section id="support" className="section cta">
+        <section id="support" className="section support">
           <div className="container">
             <h2 className="section-title">Support & Collaboration</h2>
             <p className="section-desc">Sponsorship accelerates the Python template and ecosystem build‑out, bringing more verifiable apps to Sui.</p>
