@@ -15,6 +15,7 @@ function App() {
             <a href="#features">Features</a>
             <a href="#roadmap">Roadmap</a>
             <a href="#support">Support</a>
+            <a href="https://github.com/nautilus-templates/nautilus-js" target="_blank" rel="noopener">GitHub</a>
           </nav>
         </div>
       </header>
@@ -28,7 +29,8 @@ function App() {
                 <p className="subtitle">Lower the barrier for web developers while preserving verifiability, security, and fast iteration.</p>
                 <div className="cta">
                   <a href="#product" className="btn primary">Start Exploring</a>
-                  <a href="http://54.81.8.36:3000/openapi" target="_blank" rel="noopener" className="btn tertiary">Live Demo</a>
+                  <a href="https://github.com/nautilus-templates/nautilus-js" target="_blank" rel="noopener" className="btn secondary">GitHub</a>
+                  <a href="http://54.81.8.36:3000/openapi" target="_blank" rel="noopener" className="btn secondary">Live Demo</a>
                 </div>
               </div>
               <div className="hero-visual" aria-hidden="true">
@@ -97,7 +99,9 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer">© Nautilus‑JS · Verifiable TEE Apps on Sui</footer>
+      <footer className="footer">
+        © Nautilus‑JS · Verifiable TEE Apps on Sui · <a href="https://github.com/nautilus-templates/nautilus-js" target="_blank" rel="noopener" style={{ color: 'inherit', textDecoration: 'underline' }}>GitHub</a>
+      </footer>
     </div>
   )
 }

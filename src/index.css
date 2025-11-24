@@ -1,35 +1,44 @@
 :root {
-  /* Deep Ocean Palette */
-  --bg: #050a14;
-  --bg-gradient-start: #050a14;
-  --bg-gradient-end: #0b1221;
-  
+  /* Deep Ocean Palette - Premium */
+  --bg: #020617;
+  --bg-gradient-start: #020617;
+  --bg-gradient-end: #0f172a;
+
   --text: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  
-  --primary: #06b6d4; /* Cyan 500 */
-  --primary-hover: #0891b2; /* Cyan 600 */
-  --primary-glow: rgba(6, 182, 212, 0.5);
-  
-  --accent: #3b82f6; /* Blue 500 */
-  --accent-glow: rgba(59, 130, 246, 0.5);
-  
-  --border: rgba(255, 255, 255, 0.1);
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --card-hover: rgba(255, 255, 255, 0.06);
-  
-  --nav-bg: rgba(5, 10, 20, 0.8);
-  
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* Vibrant Accents */
+  --primary: #22d3ee;
+  /* Cyan 400 */
+  --primary-hover: #06b6d4;
+  /* Cyan 500 */
+  --primary-glow: rgba(34, 211, 238, 0.4);
+
+  --accent: #6366f1;
+  /* Indigo 500 */
+  --accent-glow: rgba(99, 102, 241, 0.4);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.1);
+
+  --nav-bg: rgba(2, 6, 23, 0.8);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+
+  font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
-  
+
   color-scheme: dark;
   color: var(--text);
   background-color: var(--bg);
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +49,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(to bottom, var(--bg-gradient-start), var(--bg-gradient-end));
+  background: radial-gradient(circle at 50% 0%, #1e293b 0%, var(--bg) 70%);
   overflow-x: hidden;
 }
 
@@ -48,28 +57,34 @@ a {
   font-weight: 500;
   color: var(--text);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 a:hover {
   color: var(--primary);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  line-height: 1.1;
   font-weight: 700;
   color: var(--text);
   margin: 0;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
   letter-spacing: -0.02em;
 }
 
+h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  letter-spacing: -0.03em;
+}
+
 h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  letter-spacing: -0.01em;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
 }
 
 p {
@@ -78,14 +93,15 @@ p {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 9999px;
+  /* Pill shape for modern feel */
   border: 1px solid transparent;
   padding: 0.8em 1.6em;
   font-size: 1em;
   font-weight: 600;
-  font-family: inherit;
+  font-family: var(--font-sans);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button:focus,
@@ -95,15 +111,18 @@ button:focus-visible {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg);
 }
+
 ::-webkit-scrollbar-thumb {
-  background: var(--card-hover);
-  border-radius: 5px;
+  background: var(--glass-border);
+  border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
