@@ -46,10 +46,19 @@ function App() {
           <div className="container">
             <h2 className="section-title">A Developer‑Friendly TEE Framework</h2>
             <p className="section-desc">Keep verifiability while using JS to build services — less boilerplate, more focus on real product work.</p>
-            <ul className="list">
-              <li>JS‑first workflow; no systems programming background required.</li>
-              <li>Modular design that cuts cognitive load and speeds prototyping.</li>
-              <li>Security retained with verifiable TEE flows and sane defaults.</li>
+            <ul className="list features">
+              <li>
+                <h4>JS‑first workflow</h4>
+                <p>No systems programming background required.</p>
+              </li>
+              <li>
+                <h4>Modular design</h4>
+                <p>Cuts cognitive load and speeds prototyping.</p>
+              </li>
+              <li>
+                <h4>Verifiable defaults</h4>
+                <p>Security retained with TEE flows and sane defaults.</p>
+              </li>
             </ul>
           </div>
         </section>
@@ -69,17 +78,45 @@ function App() {
         <section id="roadmap" className="section roadmap">
           <div className="container">
             <h2 className="section-title">Roadmap</h2>
-            <ol className="steps">
+            <ol className="timeline">
               <li>
-                <h4>Python Template</h4>
+                <span className="dot" />
+                <div className="item-head"><span className="badge" /><h4>Python Template</h4></div>
                 <p>Designed for data science and AI developers to lower the language barrier.</p>
               </li>
               <li>
-                <h4>Expanded Sui Capabilities</h4>
+                <span className="dot" />
+                <div className="item-head"><span className="badge" /><h4>Golang Template</h4></div>
+                <p>Optimized for systems and backend developers with verifiable TEE flows.</p>
+              </li>
+              <li>
+                <span className="dot" />
+                <div className="item-head"><span className="badge" /><h4>Java Template</h4></div>
+                <p>Enterprise‑friendly template for JVM ecosystems with TEE verification.</p>
+              </li>
+              <li>
+                <span className="dot" />
+                <div className="item-head"><span className="badge" /><h4>More Production Use Cases</h4></div>
+                <p>JS‑first abstractions unlock verifiable services in real products across verticals.</p>
+              </li>
+              <li>
+                <span className="dot" />
+                <div className="item-head"><span className="badge" /><h4>TEE Module as Tooling (Walrus‑like)</h4></div>
+                <p>Package TEE flows as plug‑and‑play tooling, lowering setup time and complexity.</p>
+              </li>
+              <li>
+                <span className="dot" />
+                <div className="item-head"><span className="badge" /><h4>TEE as a Service</h4></div>
+                <p>A hosted platform offering trusted data pipelines and verification support out of the box.</p>
+              </li>
+              <li>
+                <span className="dot" />
+                <div className="item-head"><span className="badge" /><h4>Expanded Sui Capabilities</h4></div>
                 <p>Privacy and cross‑chain improvements, stronger verification and performance.</p>
               </li>
               <li>
-                <h4>Community</h4>
+                <span className="dot" />
+                <div className="item-head"><span className="badge" /><h4>Community</h4></div>
                 <p>Open‑source collaboration, shared templates and best practices to reduce blockchain barriers.</p>
               </li>
             </ol>
@@ -89,7 +126,7 @@ function App() {
         <section id="support" className="section support">
           <div className="container">
             <h2 className="section-title">Support & Collaboration</h2>
-            <p className="section-desc">Sponsorship accelerates the Python template and ecosystem build‑out, bringing more verifiable apps to Sui.</p>
+            <p className="section-desc">As adoption grows, we will tool‑ify the TEE module (Walrus‑like) and evolve towards TEE as a Service — delivering trusted data and verification support for production use cases.</p>
             <div className="cta">
               <a href="https://suivision.xyz/account/0x42ebe17a32756d7a73d003290b8894ca6e393bf45221af8b643ede72e85964e7" target="_blank" rel="noopener" className="btn primary">Sponsor Project</a>
               <a href="mailto:euraxluo@gmail.com" className="btn secondary">Contact Me</a>
