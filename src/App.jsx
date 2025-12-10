@@ -30,7 +30,7 @@ function App() {
                 <div className="cta">
                   <a href="#product" className="btn primary">Start Exploring</a>
                   <a href="https://github.com/nautilus-templates/nautilus-js" target="_blank" rel="noopener" className="btn secondary">GitHub</a>
-                  <a href="http://54.81.8.36:3000/openapi" target="_blank" rel="noopener" className="btn secondary">Live Demo</a>
+                  <a href="https://youtu.be/HIylR295zts" target="_blank" rel="noopener" className="btn secondary">Live Demo</a>
                 </div>
               </div>
               <div className="hero-visual" aria-hidden="true">
@@ -130,7 +130,7 @@ function App() {
             <div className="cta">
               <a href="https://suivision.xyz/account/0x42ebe17a32756d7a73d003290b8894ca6e393bf45221af8b643ede72e85964e7" target="_blank" rel="noopener" className="btn primary">Sponsor Project</a>
               <a href="mailto:euraxluo@gmail.com" className="btn secondary">Contact Me</a>
-              <a href="http://54.81.8.36:3000/openapi" target="_blank" rel="noopener" className="btn tertiary">See Demo</a>
+              <a href="https://youtu.be/HIylR295zts" target="_blank" rel="noopener" className="btn tertiary">See Demo</a>
             </div>
           </div>
         </section>
